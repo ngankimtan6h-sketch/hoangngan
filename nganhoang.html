@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Gia Đình Hoàng Ngân</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+overflow-x:hidden;
+}
+
+/* tiêu đề */
+
+header{
+text-align:center;
+padding:70px;
+font-size:65px;
+color:white;
+background:#ff6b81;
+font-family:'Dancing Script',cursive;
+letter-spacing:4px;
+}
+
+.subtitle{
+text-align:center;
+color:white;
+font-size:20px;
+margin-top:-25px;
+margin-bottom:50px;
+}
+
+/* container */
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:35px;
+padding:20px;
+}
+
+/* card */
+
+.card{
+background:white;
+width:280px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,0.2);
+text-align:center;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.07);
+}
+
+.avatar{
+font-size:75px;
+margin-bottom:10px;
+}
+
+.name{
+font-size:26px;
+font-weight:600;
+color:#ff6b81;
+}
+
+.info{
+font-size:14px;
+color:#555;
+margin-top:5px;
+}
+
+.quote{
+font-style:italic;
+font-size:14px;
+color:#444;
+margin-top:12px;
+}
+
+/* hiệu ứng xuất hiện */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* trái tim */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:25px;
+animation:fly 6s linear forwards;
+}
+
+@keyframes fly{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-900px);
+opacity:0;
+}
+
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:white;
+font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Gia Đình Hoàng Ngân
+</header>
+
+<div class="subtitle">
+"Năm con người – một mái ấm, vô vàn kỷ niệm."<br>
+Nơi tình yêu bắt đầu và không bao giờ kết thúc ❤️
+</div>
+
+<div class="container">
+
+<div class="card reveal">
+<div class="avatar">👨</div>
+<div class="name">Kiên</div>
+<div class="info">Nghề nghiệp: khai thác mỏ</div>
+<div class="info">Tính cách: trầm ổn đôi lúc hài hước</div>
+<div class="info">Sở thích: chơi cờ, đọc sách</div>
+<div class="quote">"Mỗi giọt mồ hôi của bố rơi xuống – là từng viên gạch dựng nên mái ấm này."</div>
+</div>
+
+<div class="card reveal">
+<div class="avatar">👩</div>
+<div class="name">Bích</div>
+<div class="info">Nghề nghiệp: kế toán</div>
+<div class="info">Tính cách: vui vẻ hoà đồng</div>
+<div class="info">Sở thích: chụp ảnh, làm đẹp và cực giỏi trong việc nấu ăn</div>
+<div class="quote">"Mỗi sự chăm lo của mẹ – là một mảnh yêu thương góp lại thành mái ấm gia đình."</div>
+</div>
+
+<div class="card reveal">
+<div class="avatar">👧</div>
+<div class="name">Hà Anh</div>
+<div class="info">Học tại: THCS Kim Tân</div>
+<div class="info">Sở thích: làm đồ handmade, chơi game</div>
+<div class="info">Tính cách: hài hước vui vẻ nhộn nhịp</div>
+<div class="quote">"Sự ngây thơ của em giống như cơn gió mát, làm dịu đi những bộn bề thường ngày."</div>
+</div>
+
+<div class="card reveal">
+<div class="avatar">👦</div>
+<div class="name">Kiên Trung</div>
+<div class="info">5 tuổi</div>
+<div class="info">Là đứa em út dễ thương trong nhà</div>
+<div class="info">Luôn mang đến tiếng cười cho mọi người</div>
+<div class="quote">"Mỗi nụ cười của em, mỗi bước chân chạy nhảy – như những nốt nhạc vui làm rộn ràng cả ngôi nhà."</div>
+</div>
+
+<div class="card reveal">
+<div class="avatar">👧</div>
+<div class="name">Ngân</div>
+<div class="info">Học tại: THPT Lào Cai</div>
+<div class="info">Sở thích: thích đi du lịch, nghe nhạc và vui vẻ đi chơi cùng bạn bè</div>
+<div class="info">Tính cách: hơi ngại ngùng hướng nội nhưng luôn chân thành với mọi người</div>
+</div>
+
+</div>
+
+<footer>
+❤️ Gia đình là điều tuyệt vời nhất ❤️
+</footer>
+
+<script>
+
+/* trái tim bay */
+
+function createHeart(){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"%";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,400);
+
+
+/* hiệu ứng xuất hiện */
+
+function reveal(){
+
+let reveals=document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight=window.innerHeight;
+let elementTop=reveals[i].getBoundingClientRect().top;
+let elementVisible=150;
+
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+window.addEventListener("load",reveal);
+
+</script>
+
+</body>
+</html>
